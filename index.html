@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Қазақстан тарихы: 20 ғасыр басындағы оқиғалар</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+      :root {
+        --primary-color: #4a90e2;
+        --secondary-color: #2c3e50;
+        --text-color: #333;
+        --background-color: #f5f7fa;
+        --accent-color: #e67e22;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.8;
+        color: var(--text-color);
+        background-color: var(--background-color);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        text-align: center;
+        padding: 80px 0;
+        margin-bottom: 60px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        color: var(--secondary-color);
+        border-bottom: 3px solid var(--accent-color);
+        padding-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+      }
+
+      .main-content {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 60px;
+        margin-top: -80px;
+        margin-bottom: 60px;
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 60px auto;
+      }
+
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: var(--primary-color);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      .timeline-item {
+        padding: 10px 50px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid var(--accent-color);
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+
+      .timeline-item:hover::after {
+        transform: scale(1.2);
+      }
+
+      .left {
+        left: 0;
+      }
+
+      .right {
+        left: 50%;
+      }
+
+      .right::after {
+        left: -16px;
+      }
+
+      .timeline-content {
+        padding: 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .quote {
+        font-style: italic;
+        border-left: 6px solid var(--accent-color);
+        padding: 20px;
+        margin: 30px 0;
+        background-color: #f9f9f9;
+        border-radius: 0 10px 10px 0;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      ul li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 15px;
+      }
+
+      ul li::before {
+        content: "•";
+        color: var(--accent-color);
+        font-size: 1.5em;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .home-button,
+      .scroll-top-button {
+        position: fixed;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .home-button:hover,
+      .scroll-top-button:hover {
+        background-color: var(--secondary-color);
+      }
+
+      .home-button {
+        top: 20px;
+      }
+
+      .scroll-top-button {
+        bottom: 20px;
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .timeline::after {
+          left: 31px;
+        }
+
+        .timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+        .timeline-item::after {
+          left: 15px;
+        }
+
+        .right {
+          left: 0%;
+        }
+
+        .home-button,
+        .scroll-top-button {
+          padding: 8px 16px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      class="home-button"
+      onclick="window.location.href='/homepage/index.html'"
+    >
+      Басты бет
+    </button>
+    <button class="scroll-top-button" onclick="scrollToTop()">Жоғары</button>
+
+    <header>
+      <div class="container">
+        <h1>Қазақстан тарихы: 20 ғасыр басындағы оқиғалар</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="main-content">
+        <h2>А.Байтұрсынов және қазақ ұлтының мәселелері</h2>
+        <p>
+          А.Байтұрсынов: «Қазақ ұлтының өмір сүруінің өзі проблемаға айналды»
+          деп санады. Бұл пікірдің себептері:
+        </p>
+        <ul>
+          <li>
+            Империалистік саясат - отарлау, қазақ территориясын иемдену мақсаты
+          </li>
+          <li>1914 жылы патшалық Ресей дүниежүзілік соғысқа тартылуы</li>
+          <li>
+            1907-12 жылдары империяның еуропалық бөліктерінің Орта Азияның шығыс
+            аудандарына 2 400 000 адамды қоныстандыруы
+          </li>
+          <li>
+            1916 жылға дейін патша өкіметі қазақтардың 45 000 000 десятина ең
+            шұрайлы жерлерін тартып алуы
+          </li>
+          <li>Жергілікті халықтан алынатын салықтың 3-4 есе көбеюі</li>
+        </ul>
+
+        <h2>1916 жылғы ұлт-азаттық көтеріліс</h2>
+        <p>
+          1916 жылғы ұлт-азаттық көтеріліс бүкілхалықтық сипатқа ие болды. Оның
+          себептері:
+        </p>
+        <ul>
+          <li>Отарлық езгінің соғыс кезінде барынша күшеюі</li>
+          <li>Жерді тартып алу және орыстандыру саясаты</li>
+          <li>1916 ж. 25 маусымдағы патшаның жарлығы</li>
+        </ul>
+
+        <div class="quote">
+          <p>
+            "Көтеріліс стихиялы түрде дамып, онда тұрақты, жеткілікті біріккен
+            басшылықтың болмағандығының салдары айқын көрінді."
+          </p>
+        </div>
+
+        <h2>1917 жылғы саяси белсенділік</h2>
+        <p>
+          1917 жылы Қазақстанда саяси белсенділіктің артуы бірқатар оқиғалардан
+          көрініс тапты:
+        </p>
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3>21-26 шілде</h3>
+              <p>I Жалпықазақ съезінде Алаш партиясы құрылды</p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3>5-13 желтоқсан</h3>
+              <p>II Жалпықазақ съезінде Алаш Орда Үкіметі құрылды</p>
+            </div>
+          </div>
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3>1917 жыл</h3>
+              <p>Қоқан автономиясы құрылды</p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3>1917 жыл</h3>
+              <p>Түркістан Федералистер партиясы құрылды</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Қазақ интелигенция өкілдерінің ұлттық мүдделерді қорғауы</h2>
+        <h3>Саяси тұрғыдан</h3>
+        <ul>
+          <li>
+            ХХ ғасырдың бас кезінде қазақ өлкесінде ұлттық саяси партиялар
+            қалыптасты
+          </li>
+          <li>1905 жылы Кадет партиясының бастауыш ұйымы құрылды</li>
+          <li>І-ІІІ бүкілресейлік мұсылмандар құрылтайлары өтті</li>
+          <li>"Мұсылман партиясы қоғамының" құрылуы басталды</li>
+          <li>
+            1916 жылғы ұлт-азаттық революция қазақ интеллигенциясының бөлінуіне
+            әкелді
+          </li>
+        </ul>
+
+        <div class="quote">
+          <p>
+            А. Байтұрсынұлы: "Қазақ секілді іргелі жұрт өзгелер қатарында соғыс
+            майданында қару- жарақ асынып, мемлекетті қорғауға лайық еді,
+            қатарда жоқ қара жұмысқа байлануын кемшілік санаймыз"
+          </p>
+        </div>
+
+        <h3>Мәдени тұрғыдан</h3>
+        <ul>
+          <li>1911-1915 жылы Троицк қаласында "Айқап" журналы шықты</li>
+          <li>1913-1918 жылдары Орынбор қаласында "Қазақ" газеті шығарылды</li>
+          <li>
+            1913 жылы А. Байтұрсыновтың "Қазақ ұлтының өмір сүруінің өзі
+            проблемаға айналды" деген пікірі жарияланды
+          </li>
+        </ul>
+
+        <div class="quote">
+          <p>
+            Ә.Бөкейханов: "Бұл соғыстан жалпы жұртқа пайда жоқ. Нарлар алысар,
+            ал шаруасын бұзып, қанын төгетін- сорлы халық болар. ХХ ғасырда
+            Еуропа патшалықтарының қылған ісі кімнің алдында ақталмақ?"
+          </p>
+        </div>
+
+        <h3>Әлеуметтік тұрғыдан</h3>
+        <ul>
+          <li>
+            Кадет ұйымы Ақпан төңкерісінен кейін көптеген қалаларда құрыла
+            бастады
+          </li>
+          <li>
+            Кадет партиясының мақсаты: бөлінбес біртұтас Ресей, конституциялық
+            монархия құру, қоныстандыру саясатын қолдау
+          </li>
+          <li>
+            Кадеттер басқа саяси партиялармен бірге митингілер мен пікір
+            сайыстар өткізді
+          </li>
+        </ul>
+
+        <h2>Алаш партиясының халық қолдауына ие болу себептері</h2>
+        <ul>
+          <li>Ұлттық мемлекетті қалыптастыру идеясын ұсынуы</li>
+          <li>Ұлттық сана-сезімді көтеруге бағытталған қызметі</li>
+          <li>Жер мәселесін шешуге ұмтылысы</li>
+          <li>Экономикалық тәуелсіздікке қол жеткізу мақсаты</li>
+          <li>Ұлттық тіл, дін және мәдениетті қорғау ұстанымы</li>
+          <li>Ғылым мен білімге негізделген мемлекет құру идеясы</li>
+        </ul>
+
+        <h3>Алаш партиясының бес негізгі идеясы</h3>
+        <ol>
+          <li>
+            <strong>Жер мәселесі:</strong> Әлихан Бөкейхановтың ұйғарымы
+            бойынша: «Қазақтың байырғы жерін қашан қазақтар өз бетінше ғылым мен
+            техникаға сүйеніп толық игермейінше, жер жеке меншікке де,
+            қоныстанушыларға да берілмейді».
+          </li>
+          <li>
+            <strong>Табиғи байлықтарды пайдалану:</strong> Жердің астындағы,
+            үстіндегі, аспанындағы барлық игілік қазақ мемлекетіне қызмет етуі
+            керек. Ә.Бөкейхановтың айтуынша: «Оның әр бір түйір тасы қазақтың
+            өңіріне түйме болып қадалу керек».
+          </li>
+          <li>
+            <strong>Экономикалық тәуелсіздік:</strong> Ә.Бөкейхановтың жобасы
+            бойынша, «Қазақтың жерінде өндірілген «бір уыс жүн сол мемлекеттің
+            азаматтарының үстіне тоқыма болып киілуі» керек».
+          </li>
+          <li>
+            <strong>Ұлттық құндылықтарды сақтау:</strong> Қазақ мемлекетінде
+            мемлекет құрушы ұлттың тіл, дін, діл үстемдігі болуы керек.
+          </li>
+          <li>
+            <strong>Түпкі мақсат:</strong> Ғылымға, ұлттық салт-дәстүрге
+            негізделген заңға сүйене отырып, ұлттық-демократиялық мемлекет құру.
+          </li>
+        </ol>
+
+        <div class="quote">
+          <p>
+            "Жер үшін, жер мен аспан байлығы үшін, тәуелсіз экономика үшін, тіл
+            мен діл үшін, дін үшін, қазақ ұлтының көзқарасы мен ар-ожданын
+            қорғайтын, ұлтты сыйлауға мойынсындыратын тәуелсіз заң мен тәуелсіз
+            ойлау жүйесін қалыптастыратын тәуелсіз ғылым үшін күрес жолы енді
+            басталды."
+          </p>
+        </div>
+
+        <h2>Қорытынды</h2>
+        <p>
+          1916-1917 жылдары болған оқиғалар Қазақстанның болашақтағы саяси
+          тұрғыдан өзгеруіне әкелді. Саяси белсенділік артып, жаңа партиялар
+          құрылып, белгілі мақсаттарға жету бағытында жұмыс атқарылды. Бұл
+          процестер тек саясатта ғана емес, жалпы қоғамда да өзіндік белсенділік
+          танытуға әкелді.
+        </p>
+        <p>
+          Ұлт азаттық қозғалысқа революцияшыл-демократияшыл зиялылардың Т.
+          Рысқұлов, Ә. Бөкейханов, А. Байтұрсынұлы, М. Дулатұлы, С. Сейфулин, Т.
+          Боткин, Ә. Майекөтов, С. Мендешев, Ә. Жангелдин, Б. Аламанов сияқты
+          өкілдер қатысты. Күрес барысында әлеуметтік жанжалдарды шешуде әртүрлі
+          топтардың белгілі бір көзқарастыры сынақтан өтті. Қазақ халқының
+          либералдық-демократиялық ойшыл өкілдері отаршыл империясымен парасатты
+          ымыраластық тәсілін жүргізуді, халықтың амандығын сақтау идеясын
+          біріші орында ұстады.
+        </p>
+        <p>
+          Алаш идеясы бүгін де, ертең де өзінің жалғасын табады, өйткені ол
+          қазақ халқының ұлттық мүдделерін қорғауға, тәуелсіз мемлекет құруға
+          және ұлттық бірегейлікті сақтауға бағытталған.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+      window.onscroll = function () {
+        var scrollTopButton = document.querySelector(".scroll-top-button");
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollTopButton.style.display = "block";
+        } else {
+          scrollTopButton.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
